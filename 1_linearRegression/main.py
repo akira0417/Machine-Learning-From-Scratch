@@ -2,7 +2,7 @@ from utils import load_auto_mpg, clean_data, loss_curve, regression_line
 from linear_regression import gradient_descent
 
 
-df = load_auto_mpg("data/auto-mpg.data")
+df = load_auto_mpg("1_linearRegression/data/auto-mpg.data")
 
 df = clean_data(df)
 
