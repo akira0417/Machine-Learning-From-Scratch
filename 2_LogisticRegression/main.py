@@ -64,8 +64,6 @@ train_accuracy = accuracy_score(y_train, train_pred)
 test_accuracy = accuracy_score(y_test, test_pred)
 
 print("\n訓練結果")
-print(f"Train accuracy: {train_accuracy:.4f}")
-print(f"Test accuracy:  {test_accuracy:.4f}")
 print(f"Final loss:    {model.loss_history[-1]:.6f}")
 
 cm = confusion_matrix(y_train, train_pred)
