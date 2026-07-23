@@ -1,9 +1,13 @@
 from utils import load_breast_cancer_data
 import numpy as np
 from logistic_regression import LogisticRegression
-
-def accuracy_score(y_true, y_pred):
-    return np.mean(y_true == y_pred)
+from metrics import (
+    confusion_matrix,
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score
+)
 
 def standardize(X):
     mean = np.mean(X, axis=0)
@@ -63,3 +67,23 @@ print("\n訓練結果")
 print(f"Train accuracy: {train_accuracy:.4f}")
 print(f"Test accuracy:  {test_accuracy:.4f}")
 print(f"Final loss:    {model.loss_history[-1]:.6f}")
+
+cm = confusion_matrix(y_train, train_pred)
+
+print("\nTrain Confusion Matrix")
+print(cm)
+
+print(f"Accuracy : {accuracy_score(y_train, train_pred):.4f}")
+print(f"Precision: {precision_score(y_train, train_pred):.4f}")
+print(f"Recall   : {recall_score(y_train, train_pred):.4f}")
+print(f"F1-score : {f1_score(y_train, train_pred):.4f}")
+
+cm = confusion_matrix(y_test, test_pred)
+
+print("\nTest Confusion Matrix")
+print(cm)
+
+print(f"Accuracy : {accuracy_score(y_test, test_pred):.4f}")
+print(f"Precision: {precision_score(y_test, test_pred):.4f}")
+print(f"Recall   : {recall_score(y_test, test_pred):.4f}")
+print(f"F1-score : {f1_score(y_test, test_pred):.4f}")
