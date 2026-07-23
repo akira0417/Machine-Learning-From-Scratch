@@ -51,7 +51,7 @@ y_test = y[split_index:]
 
 model = LogisticRegression(
     learning_rate=0.01,
-    epochs=10000
+    epochs=2000
 )
 
 model.fit(x_train, y_train)

@@ -51,7 +51,7 @@ y_test = y[split_index:]
 
 
 print("Logistic Regression with Different Learning Rates")
-learning_rate = [0.1, 0.01, 0.001]
+learning_rate = [10, 1, 0.1, 0.01, 0.001]
 
 for lr in learning_rate:
     print(f"\nLearning Rate: {lr}")
@@ -75,7 +75,7 @@ for lr in learning_rate:
     print(f"Final loss: {model.loss_history[-1]:.6f}")
 
 print("\nLogistic Regression with Different Epochs")
-epochs = [100, 500, 1000]
+epochs = [10, 100, 500, 1000, 2000]
 
 for ep in epochs:
     print(f"\nEpochs: {ep}")
