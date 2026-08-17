@@ -29,8 +29,6 @@ df["diagnosis"] = df["diagnosis"].map({
 x = df.iloc[:, 2:].to_numpy(dtype=float)
 y = df["diagnosis"].to_numpy(dtype=float)
 
-x = standardize(x)
-
 # 固定亂數種子，讓每次結果都一樣
 np.random.seed(42)
 
@@ -48,6 +46,9 @@ y_train = y[:split_index]
 
 x_test = x[split_index:]
 y_test = y[split_index:]
+
+x_train = standardize(x_train)
+x_test = standardize(x_test)
 
 model = LogisticRegression(
     learning_rate=0.01,

@@ -12,10 +12,8 @@ df["diagnosis"] = df["diagnosis"].map({
     "M":1
 })
 
-x = df.iloc[:, 2:].to_numpy(dtype=float)
+X = df.iloc[:, 2:].to_numpy(dtype=float)
 y = df["diagnosis"].to_numpy(dtype=int)
-
-X = standardize(x)
 
 # 固定亂數種子，讓每次結果都一樣
 np.random.seed(42)
@@ -28,6 +26,9 @@ X = X[indices]
 y = y[indices]
 
 X_train, X_test, y_train, y_test = train_test_split(X, y)
+
+X_train = standardize(X_train)
+X_test = standardize(X_test)
 
 model = KNN(k=3)
 model.fit(X_train, y_train)
