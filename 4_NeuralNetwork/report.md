@@ -36,9 +36,9 @@ Output Layer 使用 Sigmoid 產生二元分類的預測機率。
 
 透過 Chain Rule 將 Loss 的誤差由 Output Layer 傳回 Hidden Layer：
 
-dZ2 = A2 - y
-dW2 = (A1.T @ dZ2) / m
-db2 = mean(dZ2)
+- `dZ2 = A2 - y`
+- `dW2 = (A1.T @ dZ2) / m`
+- `db2 = mean(dZ2)`
 
 dA1 = dZ2 @ W2.T
 dZ1 = dA1 * ReLU'(Z1)
