@@ -10,13 +10,17 @@ class NeuralNetwork:
         input_size,
         hidden_size,
         learning_rate=0.01,
-        epochs=1000
+        epochs=1000,
+        random_state=42
     ):
+
         self.input_size = input_size
         self.hidden_size = hidden_size
         self.learning_rate = learning_rate
         self.epochs = epochs
 
+        np.random.seed(random_state)
+        
         # 第一層參數
         self.W1 = np.random.randn(input_size, hidden_size) * 0.01
         self.b1 = np.zeros(hidden_size)

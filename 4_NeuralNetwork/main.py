@@ -20,7 +20,8 @@ model = NeuralNetwork(
     input_size=30,
     hidden_size=8,
     learning_rate=0.01,
-    epochs=5000
+    epochs=5000,
+    random_state=42
 )
 
 model.fit(
