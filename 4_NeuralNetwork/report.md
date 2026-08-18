@@ -24,11 +24,11 @@ Input Layer → Hidden Layer (ReLU) → Output Layer (Sigmoid)
 
 Forward Propagation：
 
-Z1 = XW1 + b1
-A1 = ReLU(Z1)
+- `Z1 = XW1 + b1`
+- `A1 = ReLU(Z1)`
 
-Z2 = A1W2 + b2
-A2 = Sigmoid(Z2)
+- `Z2 = A1W2 + b2`
+- `A2 = Sigmoid(Z2)`
 
 Output Layer 使用 Sigmoid 產生二元分類的預測機率。
 
@@ -40,11 +40,11 @@ Output Layer 使用 Sigmoid 產生二元分類的預測機率。
 - `dW2 = (A1.T @ dZ2) / m`
 - `db2 = mean(dZ2)`
 
-dA1 = dZ2 @ W2.T
-dZ1 = dA1 * ReLU'(Z1)
+- `dA1 = dZ2 @ W2.T`
+- `dZ1 = dA1 * ReLU'(Z1)`
 
-dW1 = (X.T @ dZ1) / m
-db1 = mean(dZ1)
+- `dW1 = (X.T @ dZ1) / m`
+- `db1 = mean(dZ1)`
 
 最後使用 Gradient Descent 更新 W1、b1、W2、b2。
 
