@@ -13,14 +13,14 @@ from model import SimpleCNN
 transform = transforms.ToTensor()
 
 train_dataset = datasets.MNIST(
-    root="./data",
+    root="./5_CNN/data",
     train=True,
     download=True,
     transform=transform
 )
 
 test_dataset = datasets.MNIST(
-    root="./data",
+    root="./5_CNN/data",
     train=False,
     download=True,
     transform=transform
@@ -30,7 +30,7 @@ test_dataset = datasets.MNIST(
 # DataLoader
 train_loader = DataLoader(
     train_dataset,
-    batch_size=64,
+    batch_size=32,
     shuffle=True
 )
 
@@ -52,7 +52,7 @@ criterion = nn.CrossEntropyLoss()
 # Optimizer
 optimizer = optim.SGD(
     model.parameters(),
-    lr=0.1
+    lr=0.01
 )
 
 
