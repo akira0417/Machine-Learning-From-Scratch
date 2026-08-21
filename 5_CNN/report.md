@@ -31,6 +31,11 @@ Forward → Loss → Backward → Optimizer → Update Parameters
 
 比較使用 1 層與 2 層 Convolution 的模型。
 
+固定參數：
+- Epoch：5
+- Batch Size：32
+- Learning Rate：0.01
+
 | CNN 架構 | Final Loss | Train Accuracy | Test Accuracy |
 | --- | ---: | ---: | ---: |
 | 1 Conv | 0.2085 | 94.05% | 94.70% |
@@ -40,7 +45,12 @@ Forward → Loss → Backward → Optimizer → Update Parameters
 
 ## 4. Learning Rate 實驗
 
-固定 2 Conv、Batch Size = 32、Epoch = 5，比較不同 Learning Rate。
+比較不同 Learning Rate 對模型訓練結果的影響。
+
+固定參數：
+- CNN 架構：2 Conv
+- Epoch：5
+- Batch Size：32
 
 | Learning Rate | Final Loss | Train Accuracy | Test Accuracy |
 | ---: | ---: | ---: | ---: |
@@ -52,7 +62,12 @@ Learning Rate = 0.001 時收斂速度較慢；Learning Rate = 0.1 在本次 5 Ep
 
 ## 5. Batch Size 實驗
 
-固定 2 Conv、Learning Rate = 0.1、Epoch = 5，比較不同 Batch Size。
+比較不同 Batch Size 對模型訓練結果的影響。
+
+固定參數：
+- CNN 架構：2 Conv
+- Epoch：5
+- Learning Rate：0.1
 
 | Batch Size | Final Loss | Train Accuracy | Test Accuracy |
 | ---: | ---: | ---: | ---: |
