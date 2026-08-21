@@ -2,7 +2,7 @@
 
 ## 1. CNN 基本原理
 
-本週學習 CNN（Convolutional Neural Network）的基本架構與運作方式。
+學習 CNN（Convolutional Neural Network）的基本架構與運作方式。
 
 主要學習內容：
 - CNN 適合處理具有空間結構的影像資料。
@@ -81,6 +81,6 @@ Batch Size 較小時，每個 Epoch 會進行較多次參數更新；Batch Size 
 
 ## 6. 學習心得
 
-透過本週的學習，我了解了 Convolution、Padding、Stride、Pooling 等 CNN 基本原理，也從 NumPy 的簡單實作進一步使用 PyTorch 建立並訓練完整 CNN。
+透過本次的學習，我了解了 Convolution、Padding、Stride、Pooling 等 CNN 基本原理，也從 NumPy 的簡單實作進一步使用 PyTorch 建立並訓練完整 CNN。
 
 實驗中也觀察到 CNN 層數、Learning Rate、Batch Size 都會影響模型的訓練結果與收斂速度。最終使用 2 層 Convolution、Learning Rate = 0.1、Batch Size = 32，在 MNIST 上得到 98.62% 的最終 Test Accuracy。
